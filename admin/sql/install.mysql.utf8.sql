@@ -3,7 +3,9 @@ DROP TABLE IF EXISTS `#__helloworld`;
 CREATE TABLE `#__helloworld` (
 	`id`       INT(11)     NOT NULL AUTO_INCREMENT,
 	`greeting` VARCHAR(25) NOT NULL,
-	`published` tinyint(4) NOT NULL DEFAULT '1',
+	`published` tinyint(4) NOT NULL,
+	`catid`	    INT(11)    NOT NULL DEFAULT '0',
+	`params`   VARCHAR(1024) NOT NULL DEFAULT '',
 	PRIMARY KEY (`id`)
 )
 	ENGINE =MyISAM
